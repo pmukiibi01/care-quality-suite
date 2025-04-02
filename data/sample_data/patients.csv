@@ -1,0 +1,11 @@
+patient_id,mrn,first_name,last_name,date_of_birth,gender,race,ethnicity
+550e8400-e29b-41d4-a716-446655440000,MRN001,John,Doe,1980-05-15,Male,White,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440001,MRN002,Jane,Smith,1975-08-22,Female,Black,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440002,MRN003,Mike,Johnson,1965-12-10,Male,Hispanic,Hispanic
+550e8400-e29b-41d4-a716-446655440003,MRN004,Sarah,Williams,1990-03-08,Female,White,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440004,MRN005,Robert,Brown,1955-11-30,Male,Asian,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440005,MRN006,Lisa,Davis,1985-07-14,Female,Black,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440006,MRN007,David,Miller,1972-01-25,Male,White,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440007,MRN008,Emily,Wilson,1988-09-18,Female,White,Non-Hispanic
+550e8400-e29b-41d4-a716-446655440008,MRN009,Michael,Moore,1960-04-12,Male,Hispanic,Hispanic
+550e8400-e29b-41d4-a716-446655440009,MRN010,Amanda,Taylor,1978-06-05,Female,Asian,Non-Hispanic
