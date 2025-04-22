@@ -1,0 +1,60 @@
+name: 'value_based_care_quality'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'value_based_care_quality'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/reference/model-configs
+models:
+  value_based_care_quality:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+    quality_measures:
+      +materialized: table
+      +schema: quality_measures
+
+seeds:
+  value_based_care_quality:
+    +schema: staging
+    +materialized: table
+
+vars:
+  # Quality measure configurations
+  hedis_measures:
+    - diabetes_care_hemoglobin_a1c
+    - breast_cancer_screening
+    - colorectal_cancer_screening
+    - cervical_cancer_screening
+    - childhood_immunization_status
+  
+  hvbp_measures:
+    - patient_safety_indicator
+    - clinical_process_of_care
+    - patient_experience
+    - efficiency_measures
+
+# Package dependencies
+packages:
+  - package: dbt-labs/codegen
+    version: 0.12.1
